@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How Horror Story Studio accesses, uses, stores and deletes Google and YouTube data.">
+  <meta name="theme-color" content="#131315">
+  <link rel="canonical" href="https://foreveraction.github.io/horror-studio-public/privacy.html">
+  <link rel="stylesheet" href="styles.css">
+  <title>Privacy Policy | Horror Story Studio</title>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell bar">
+      <a class="wordmark" href="./"><span class="mark" aria-hidden="true"></span> Horror Story Studio</a>
+      <nav aria-label="Main navigation"><a href="./">Home</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+  </header>
+  <main id="main" class="shell reading">
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated <time datetime="2026-11-25">November 25, 2026</time></p>
+    <p>Horror Story Studio is operated by the owner of the What the Night Hides YouTube channel for that channel’s production and publication workflow. The studio application and this static information site are separate.</p>
+
+    <h2>Google and YouTube data we access</h2>
+    <p>The application uses YouTube API Services through YouTube Data API v3. The owner grants access through a Google OAuth consent screen. The desktop authorization requests <code>https://www.googleapis.com/auth/youtube.force-ssl</code> to verify the authorized channel and manage the owner’s uploads. Offline access allows the notebook to obtain an access token during a later owner-run session.</p>
+    <p>The integration reads the authorized channel’s identifier and title. It reads the owner’s relevant video and playlist identifiers, metadata, processing results, visibility and scheduling settings, caption tracks, and thumbnail status. It may download the serving caption file to compare it with the approved local captions. The integration does not request Gmail or contacts access.</p>
+    <p>The notebook may also use a separately consented Google Drive credential scoped to specific files. It uses an owner-authorized project folder to verify transfers and retain project inputs, output media, and production records. If the Drive acceptance check is run, it reads the Drive account email to confirm the owner and stores a hash of the matched email in its evidence record.</p>
+
+    <h2>How we use and share the data</h2>
+    <p>We use YouTube data to confirm the channel, avoid duplicate uploads, verify processing and metadata, and confirm publication settings. When the owner approves a release, the application sends the selected video, thumbnail, captions, metadata, declarations, playlist assignments, and scheduling instructions to YouTube. YouTube makes a release available according to the owner’s visibility and schedule.</p>
+    <p>The owner runs the application in Google Colab and keeps project files in the owner’s Google Drive. The AI workflow can send scripts, selected source excerpts, or review media to Gemini when the owner runs those steps. The YouTube integration uses Google user data for channel and publication operations. OAuth credentials and YouTube owner readbacks are kept out of AI prompts. We do not sell Google user data or use it to serve advertisements.</p>
+
+    <h2>Storage and protection</h2>
+    <p>The one-time Windows helper stores the refresh credential in a private local project file with restricted Windows permissions. When the owner configures cloud access, the notebook reads the credential from Colab Secrets. The application saves publishing evidence in the private project folder in Google Drive. The resumable upload state is encrypted separately. The website source and public site contain no credentials, private media, or owner API records.</p>
+    <p>The application retains relevant YouTube readbacks to confirm a release and reconcile retries. The owner reviews stored YouTube API data and removes or refreshes it as required by the <a href="https://developers.google.com/youtube/terms/developer-policies">YouTube API Services Developer Policies</a>. The application leaves this cleanup to the owner.</p>
+
+    <h2>Revoke access or delete stored data</h2>
+    <p>To revoke access, remove Horror Story Studio in your <a href="https://myaccount.google.com/connections">Google Account connections</a>. The owner can then remove the local OAuth file and Colab Secret, and delete the relevant YouTube readbacks, downloaded caption copies, and upload state in the private project folder and its trash. The owner can also disconnect the separately authorized Drive credential.</p>
+    <p>To request deletion or ask about privacy, <a href="https://github.com/ForeverAction/horror-studio-public/issues/new">contact the maintainer through the public repository</a>. Post only a request to arrange contact. Keep account identifiers, credentials and other private details out of public issues. The owner handles deletion directly. YouTube’s policies require deletion as soon as possible and within seven calendar days of a deletion request, or within 30 days of revocation through Google’s settings.</p>
+    <p>Deleting the application’s copies does not remove videos or other data held by YouTube. Manage those separately in <a href="https://studio.youtube.com/">YouTube Studio</a>.</p>
+
+    <h2>This website</h2>
+    <p>This GitHub Pages site has no sign-in, forms, advertising, analytics scripts, or application cookies. GitHub provides the hosting and processes requests under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. Google’s handling of data on its services is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="shell bar"><a href="./">Horror Story Studio</a><nav aria-label="Policy links"><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of use</a></nav></div>
+  </footer>
+</body>
+</html>
